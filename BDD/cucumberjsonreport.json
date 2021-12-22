@@ -1,0 +1,321 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4985923100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "i will launch browser",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.i_will_launch_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2409772000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "enter the url \"http://localhost:8888\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8888\"",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefination.StepDefinationTest.enter_the_url(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 314817800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Login page is displayed and i will enter username \"admin\" and password \"admin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"admin\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"admin\"",
+                  "offset": 71
+                }
+              ],
+              "location": "StepDefination.StepDefinationTest.login_page_is_displayed_and_i_will_enter_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3794917700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on login button",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6416691700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on organisation",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_organisation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2771779200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "click on create organization",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_create_organization()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3901656900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Enter organisation name, phone, website and employees",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.enter_organisation_name_phone_website_and_employees(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "organisation name",
+                  "phone",
+                  "website",
+                  "employees"
+                ]
+              },
+              {
+                "cells": [
+                  "TestYantra",
+                  "9964648142",
+                  "www.sumne.com",
+                  "2000"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 144152200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "click on save button",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_save_button()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-22T06:33:42.980Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4998800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.ConnectDB()"
+            }
+          },
+          {
+            "result": {
+              "duration": 999500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.initBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1999200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.Login()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "i will login to vtiger using valid credentials and i create contact by entering frirstName, LastName, phoneNumber and emailId",
+        "description": "",
+        "id": "i-create-a-contact-in-vtiger-application;i-will-login-to-vtiger-using-valid-credentials-and-i-create-contact-by-entering-frirstname--lastname--phonenumber-and-emailid",
+        "after": [
+          {
+            "result": {
+              "duration": 1000500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.LogOut()"
+            }
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.quitBrowser()"
+            }
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.CloseDB()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9295297600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Click on Contact module",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_contact_module()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3250407900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Click on create contact",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_create_contact()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 726755600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "enter frirstName, LastName, phoneNumber and emailId",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.enter_frirst_name_last_name_phone_number_and_email_id(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "frirstName",
+                  "LastName",
+                  "phoneNumber",
+                  "emailId"
+                ]
+              },
+              {
+                "cells": [
+                  "vinay",
+                  "suresh",
+                  "9964648142",
+                  "vinayms168@gmail.com"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 229637700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "click on Organization look up page",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_organization_look_up_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4605789800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "select Organization from lookUp Page",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.select_organization_from_look_up_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10211451100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "click on save button in contact module",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_save_button_in_contact_module()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 507419500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Verify frirstName, LastName, phoneNumber and emailId created or not",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.verify_frirst_name_last_name_phone_number_and_email_id_created_or_not()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "i create a contact in vTiger application",
+    "description": "",
+    "id": "i-create-a-contact-in-vtiger-application",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/Contact.feature",
+    "tags": []
+  }
+]

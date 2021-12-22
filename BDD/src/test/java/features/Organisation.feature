@@ -17,7 +17,7 @@ Feature: user can create modify and delete organization
       #| organization |
       #| Amazon       |
 
-  @run
+
   Scenario: As a valid user create organization with organization, website, phone and employee
     When home page is displayed
     And click on organisation
