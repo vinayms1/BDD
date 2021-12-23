@@ -42,20 +42,25 @@ public class StepDefinationTest {
 
 	@When("Login page is displayed and i will enter username and password")
 	public void login_page_is_displayed_and_i_will_enter_username_and_password() {
-		base.driver.findElement(By.name("user_name")).sendKeys("admin");
-		base.driver.findElement(By.name("user_password")).sendKeys("admin");
+//		base.driver.findElement(By.name("user_name")).sendKeys("admin");
+//		base.driver.findElement(By.name("user_password")).sendKeys("admin");
+		
+		base.pagemanger.initLoginPage(base.driver).getUsernametextbox().sendKeys("admin");
+		base.pagemanger.initLoginPage(base.driver).getPasswordtextbox().sendKeys("admin");
+		
 	}
 
 	@When("click on login button")
 	public void click_on_login_button() {
-		base.driver.findElement(By.id("submitButton")).click();
+		//base.driver.findElement(By.id("submitButton")).click();
+		base.pagemanger.initLoginPage(base.driver).getLoginbutton().click();
 	}
 
 	@Then("i will navigate it will navigating to home page or not")
 	public void i_will_navigate_it_will_navigating_to_home_page_or_not() {
 //	 String text = driver.findElement(By.linkText("Test Yantra")).getText();
 //	  Assert.assertTrue(text.contains("Test Yantra"));
-		base.driver.close();
+		
 	}
 
 	@Given("enter the url {string}")
@@ -65,8 +70,10 @@ public class StepDefinationTest {
 
 	@When("Login page is displayed and i will enter username {string} and password {string}")
 	public void login_page_is_displayed_and_i_will_enter_username_and_password(String userName, String password) {
-		base.driver.findElement(By.name("user_name")).sendKeys(userName);
-		base.driver.findElement(By.name("user_password")).sendKeys(password);
+//		base.driver.findElement(By.name("user_name")).sendKeys(userName);
+//		base.driver.findElement(By.name("user_password")).sendKeys(password);
+		base.pagemanger.initLoginPage(base.driver).getUsernametextbox().sendKeys(userName);
+		base.pagemanger.initLoginPage(base.driver).getPasswordtextbox().sendKeys(password);
 	}
 
 	@When("home page is displayed")
@@ -79,18 +86,21 @@ public class StepDefinationTest {
 	@When("click on organisation")
 	public void click_on_organisation() throws Throwable {
 		Thread.sleep(3000);
-		base.driver.findElement(By.linkText("Organizations")).click();
+//		base.driver.findElement(By.linkText("Organizations")).click();
+		base.pagemanger.initHomePage(base.driver).getOrganizationLink().click();
 	}
 
 	@When("click on create organization")
 	public void click_on_create_organization() {
-		base.driver.findElement(By.xpath("//*[@title=\"Create Organization...\"]")).click();
+		//base.driver.findElement(By.xpath("//*[@title=\"Create Organization...\"]")).click();
+		base.pagemanger.initOrganizationPage(base.driver).getCreateNewOrganization().click();
 	}
 
 	@Then("i will check whether i getting error msg or not")
 	public void i_will_check_whether_i_getting_error_msg_or_not() {
 		String actualErrorMsg = "You must specify a valid username and password";
-		String expectedErrorMsg = base.driver.findElement(By.xpath("//*[@class=\"errorMessage\"]")).getText();
+		//String expectedErrorMsg = base.driver.findElement(By.xpath("//*[@class=\"errorMessage\"]")).getText();
+		String expectedErrorMsg = base.pagemanger.initLoginPage(base.driver).getErrorMsg();
 		Assert.assertEquals(actualErrorMsg.contains(expectedErrorMsg), true);
 	}
 
@@ -98,14 +108,15 @@ public class StepDefinationTest {
 	public void enter_organisation_name_and_click_on_save_button(String orgName) {
 
 		int ram = new Random().nextInt(1000);
-		base.driver.findElement(By.xpath("//*[@name=\"accountname\"]")).sendKeys(orgName + ram);
-		base.driver.findElement(By.xpath("(//input[@title=\"Save [Alt+S]\"])[1]")).click();
-
+//		base.driver.findElement(By.xpath("//*[@name=\"accountname\"]")).sendKeys(orgName + ram);
+//		base.driver.findElement(By.xpath("(//input[@title=\"Save [Alt+S]\"])[1]")).click();
+		 base.pagemanger.initCreatingNewOrganization(base.driver).organizationName(orgName+ram);
 	}
 
 	@Then("verify organization {string} is created or not")
 	public void verify_organization_is_created_or_not(String orgName) {
-		String text = base.driver.findElement(By.className("dvHeaderText")).getText();
+//		String text = base.driver.findElement(By.className("dvHeaderText")).getText();
+		String text = base.pagemanger.initOrganisationInfo(base.driver).getOrganizationTitle().getText();
 		if (text.contains(orgName)) {
 			System.out.println("organisation is created");
 			base.driver.close();
@@ -127,46 +138,48 @@ public class StepDefinationTest {
 		webSiteId = (String) data.get(0).get("website");
 		employee = (String) data.get(0).get("employees");
 
-		base.driver.findElement(By.xpath("//*[@name=\"accountname\"]")).sendKeys(orgName);
-		base.driver.findElement(By.xpath("//*[@name=\"website\"]")).sendKeys(webSiteId);
-		base.driver.findElement(By.xpath("//*[@name=\"phone\"]")).sendKeys(phoneNum);
-		base.driver.findElement(By.xpath("//*[@name=\"employees\"]")).sendKeys(employee);
+//		base.driver.findElement(By.xpath("//*[@name=\"accountname\"]")).sendKeys(orgName);
+//		base.driver.findElement(By.xpath("//*[@name=\"website\"]")).sendKeys(webSiteId);
+//		base.driver.findElement(By.xpath("//*[@name=\"phone\"]")).sendKeys(phoneNum);
+//		base.driver.findElement(By.xpath("//*[@name=\"employees\"]")).sendKeys(employee);
+		base.pagemanger.initCreatingNewOrganization(base.driver).getOrganizationTextBox().sendKeys(orgName);
+		base.pagemanger.initCreatingNewOrganization(base.driver).getPhoneTextField().sendKeys(phoneNum);
+		base.pagemanger.initCreatingNewOrganization(base.driver).getEmployeeTextField().sendKeys(employee);
+		base.pagemanger.initCreatingNewOrganization(base.driver).getWebsiteTextField().sendKeys(webSiteId);
 		Thread.sleep(3000);
 	}
 
 	@When("click on save button")
 	public void click_on_save_button() {
-		base.driver.findElement(By.xpath("(//input[@title=\"Save [Alt+S]\"])[1]")).click();
+		//base.driver.findElement(By.xpath("(//input[@title=\"Save [Alt+S]\"])[1]")).click();
+		base.pagemanger.initCreatingNewOrganization(base.driver).getSaveButton().click();
 	}
 
 	@Then("verify organisation name, phone, website, employees is created or not")
 	public void verify_organisation_name_phone_website_employees_is_created_or_not() {
-		String actOrgName = base.driver.findElement(By
-				.xpath("//td[.=\"Organization Name\"]/following-sibling::td[@id=\"mouseArea_Organization Name\"]/span"))
-				.getText();
-		String ActualWebSite = base.driver
-				.findElement(By.xpath("//td[.=\"Website\"]/following-sibling::td[@id=\"mouseArea_Website\"]/span"))
-				.getText();
-		String ActualPhoneNum = base.driver
-				.findElement(By.xpath("//td[.=\"Phone\"]/following-sibling::td[@id=\"mouseArea_Phone\"]/span"))
-				.getText();
-		String ActualEmployeeNum = base.driver
-				.findElement(By.xpath("//td[.=\"Employees\"]/following-sibling::td[@id=\"mouseArea_Employees\"]/span"))
-				.getText();
+//		String actOrgName = base.driver.findElement(By.xpath("//td[.=\"Organization Name\"]/following-sibling::td[@id=\"mouseArea_Organization Name\"]/span")).getText();
+//		String ActualWebSite = base.driver.findElement(By.xpath("//td[.=\"Website\"]/following-sibling::td[@id=\"mouseArea_Website\"]/span")).getText();		
+//		String ActualPhoneNum = base.driver.findElement(By.xpath("//td[.=\"Phone\"]/following-sibling::td[@id=\"mouseArea_Phone\"]/span")).getText();
+//		String ActualEmployeeNum = base.driver.findElement(By.xpath("//td[.=\"Employees\"]/following-sibling::td[@id=\"mouseArea_Employees\"]/span")).getText();
 
+		String actOrgName =base.pagemanger.initOrganisationInfo(base.driver).getOrganizationNametex().getText();
+		String ActualWebSite = base.pagemanger.initOrganisationInfo(base.driver).getWebSiteText().getText();
+		String ActualPhoneNum = base.pagemanger.initOrganisationInfo(base.driver).getPhoneText().getText();
+		String ActualEmployeeNum = base.pagemanger.initOrganisationInfo(base.driver).getEmployessText().getText();
+		
 		SoftAssert sa = new SoftAssert();
 		sa.assertEquals(orgName.contains(actOrgName), true);
 		sa.assertEquals(ActualWebSite.contains(webSiteId), true);
 		sa.assertEquals(ActualPhoneNum.contains(phoneNum), true);
 		sa.assertEquals(ActualEmployeeNum.contains(employee), true);
-		base.driver.close();
 		sa.assertAll();
 	}
 
 	@Then("Click on Contact module")
 	public void click_on_contact_module() throws Throwable {
 		Thread.sleep(3000);
-		base.driver.findElement(By.linkText("Contacts")).click();
+		//base.driver.findElement(By.linkText("Contacts")).click();
+		
 	}
 
 	@Then("Click on create contact")
@@ -248,3 +261,5 @@ public class StepDefinationTest {
 	}
 
 }
+
+

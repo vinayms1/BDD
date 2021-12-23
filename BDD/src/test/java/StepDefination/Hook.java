@@ -10,6 +10,7 @@ import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utility.Base;
 import utility.FileUtility;
+import utilityManager.PageFactoryManager;
 
 public class Hook {
 	Base base;
@@ -31,6 +32,7 @@ public class Hook {
 		else {
 			System.out.println("enter the valid browser name");
 		}
+		base.pagemanger=new PageFactoryManager();
 		base.driver.manage().window().maximize();
 		base.driver.manage().timeouts().implicitlyWait(10, TimeUnit.MILLISECONDS);
 	}

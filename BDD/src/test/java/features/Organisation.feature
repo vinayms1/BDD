@@ -6,16 +6,16 @@ Feature: user can create modify and delete organization
     And Login page is displayed and i will enter username "admin" and password "admin"
     And click on login button
 
-  #Scenario Outline: As a valid user create a multiple organization
-    #When home page is displayed
-    #And click on organisation
-    #And click on create organization
-    #And enter organisation name "<organization>" and click on save button
-    #Then verify organization "<organization>" is created or not
-#
-    #Examples: 
-      #| organization |
-      #| Amazon       |
+  Scenario Outline: As a valid user create a multiple organization
+    When home page is displayed
+    And click on organisation
+    And click on create organization
+    And enter organisation name "<organization>" and click on save button
+    Then verify organization "<organization>" is created or not
+
+    Examples: 
+      | organization |
+      | Amazon       |
 
 
   Scenario: As a valid user create organization with organization, website, phone and employee

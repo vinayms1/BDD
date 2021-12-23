@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4985923100,
+              "duration": 999100,
               "status": "passed"
             },
             "line": 4,
@@ -23,28 +23,167 @@
           },
           {
             "result": {
-              "duration": 2409772000,
+              "duration": 1000600,
               "status": "passed"
             },
             "line": 5,
-            "name": "enter the url \"http://localhost:8888\"",
+            "name": "enter the url \"http://localhost:8888/\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"http://localhost:8888\"",
+                  "val": "\"http://localhost:8888/\"",
                   "offset": 14
                 }
               ],
               "location": "StepDefination.StepDefinationTest.enter_the_url(java.lang.String)"
             },
             "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-23T11:28:49.268Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3997300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.initBrowser()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "i want login to the application with valid creadentials",
+        "description": "",
+        "id": "login-feature-for-vtiger-application;i-want-login-to-the-application-with-valid-creadentials",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Login page is displayed and i will enter username and password",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.login_page_is_displayed_and_i_will_enter_username_and_password()"
+            },
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 314817800,
               "status": "passed"
             },
-            "line": 6,
+            "line": 10,
+            "name": "click on login button",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "i will check it will navigating to home page or not",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1999100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "i will launch browser",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.i_will_launch_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "enter the url \"http://localhost:8888/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8888/\"",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefination.StepDefinationTest.enter_the_url(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-23T11:28:49.458Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6997600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.initBrowser()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "i want login to the application with valid user name and password",
+        "description": "",
+        "id": "login-feature-for-vtiger-application;i-want-login-to-the-application-with-valid-user-name-and-password",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 998600,
+              "status": "passed"
+            },
+            "line": 15,
             "name": "Login page is displayed and i will enter username \"admin\" and password \"admin\"",
             "match": {
               "arguments": [
@@ -59,14 +198,13 @@
               ],
               "location": "StepDefination.StepDefinationTest.login_page_is_displayed_and_i_will_enter_username_and_password(java.lang.String,java.lang.String)"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 3794917700,
               "status": "passed"
             },
-            "line": 7,
+            "line": 16,
             "name": "click on login button",
             "match": {
               "location": "StepDefination.StepDefinationTest.click_on_login_button()"
@@ -75,117 +213,78 @@
           },
           {
             "result": {
-              "duration": 6416691700,
               "status": "passed"
             },
-            "line": 8,
-            "name": "click on organisation",
+            "line": 17,
+            "name": "i will navigate it will navigating to home page or not",
             "match": {
-              "location": "StepDefination.StepDefinationTest.click_on_organisation()"
+              "location": "StepDefination.StepDefinationTest.i_will_navigate_it_will_navigating_to_home_page_or_not()"
             },
-            "keyword": "And "
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2998300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "i will launch browser",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.i_will_launch_browser()"
+            },
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2771779200,
+              "duration": 1000300,
               "status": "passed"
             },
-            "line": 9,
-            "name": "click on create organization",
+            "line": 5,
+            "name": "enter the url \"http://localhost:8888/\"",
             "match": {
-              "location": "StepDefination.StepDefinationTest.click_on_create_organization()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3901656900,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "Enter organisation name, phone, website and employees",
-            "match": {
-              "location": "StepDefination.StepDefinationTest.enter_organisation_name_phone_website_and_employees(io.cucumber.datatable.DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "organisation name",
-                  "phone",
-                  "website",
-                  "employees"
-                ]
-              },
-              {
-                "cells": [
-                  "TestYantra",
-                  "9964648142",
-                  "www.sumne.com",
-                  "2000"
-                ]
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 144152200,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "click on save button",
-            "match": {
-              "location": "StepDefination.StepDefinationTest.click_on_save_button()"
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8888/\"",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefination.StepDefinationTest.enter_the_url(java.lang.String)"
             },
             "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2021-12-22T06:33:42.980Z",
+        "start_timestamp": "2021-12-23T11:28:49.599Z",
         "before": [
           {
             "result": {
-              "duration": 4998800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "StepDefination.Hook.ConnectDB()"
-            }
-          },
-          {
-            "result": {
-              "duration": 999500,
               "status": "passed"
             },
             "match": {
               "location": "StepDefination.Hook.initBrowser()"
             }
-          },
-          {
-            "result": {
-              "duration": 1999200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "StepDefination.Hook.Login()"
-            }
           }
         ],
-        "line": 15,
-        "name": "i will login to vtiger using valid credentials and i create contact by entering frirstName, LastName, phoneNumber and emailId",
+        "line": 27,
+        "name": "i want login to the application with invalid user name and password",
         "description": "",
-        "id": "i-create-a-contact-in-vtiger-application;i-will-login-to-vtiger-using-valid-credentials-and-i-create-contact-by-entering-frirstname--lastname--phonenumber-and-emailid",
+        "id": "login-feature-for-vtiger-application;i-want-login-to-the-application-with-invalid-user-name-and-password;;2",
         "after": [
-          {
-            "result": {
-              "duration": 1000500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "StepDefination.Hook.LogOut()"
-            }
-          },
           {
             "result": {
               "status": "passed"
@@ -193,129 +292,423 @@
             "match": {
               "location": "StepDefination.Hook.quitBrowser()"
             }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 999700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Login page is displayed and i will enter username \"admin\" and password \"admin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"admin\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"admin\"",
+                  "offset": 71
+                }
+              ],
+              "location": "StepDefination.StepDefinationTest.login_page_is_displayed_and_i_will_enter_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1998000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "click on login button",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_login_button()"
+            },
+            "keyword": "And "
           },
           {
             "result": {
               "status": "passed"
             },
+            "line": 23,
+            "name": "i will check whether i getting error msg or not",
             "match": {
-              "location": "StepDefination.Hook.CloseDB()"
+              "location": "StepDefination.StepDefinationTest.i_will_check_whether_i_getting_error_msg_or_not()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegressionTest"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "i will launch browser",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.i_will_launch_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "enter the url \"http://localhost:8888/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8888/\"",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefination.StepDefinationTest.enter_the_url(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-23T11:28:49.672Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.initBrowser()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "i want login to the application with invalid user name and password",
+        "description": "",
+        "id": "login-feature-for-vtiger-application;i-want-login-to-the-application-with-invalid-user-name-and-password;;3",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.quitBrowser()"
             }
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 9295297600,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "Click on Contact module",
-            "match": {
-              "location": "StepDefination.StepDefinationTest.click_on_contact_module()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3250407900,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "Click on create contact",
-            "match": {
-              "location": "StepDefination.StepDefinationTest.click_on_create_contact()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 726755600,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "enter frirstName, LastName, phoneNumber and emailId",
-            "match": {
-              "location": "StepDefination.StepDefinationTest.enter_frirst_name_last_name_phone_number_and_email_id(io.cucumber.datatable.DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "frirstName",
-                  "LastName",
-                  "phoneNumber",
-                  "emailId"
-                ]
-              },
-              {
-                "cells": [
-                  "vinay",
-                  "suresh",
-                  "9964648142",
-                  "vinayms168@gmail.com"
-                ]
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 229637700,
               "status": "passed"
             },
             "line": 21,
-            "name": "click on Organization look up page",
+            "name": "Login page is displayed and i will enter username \"admin\" and password \"adasdasd\"",
             "match": {
-              "location": "StepDefination.StepDefinationTest.click_on_organization_look_up_page()"
+              "arguments": [
+                {
+                  "val": "\"admin\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"adasdasd\"",
+                  "offset": 71
+                }
+              ],
+              "location": "StepDefination.StepDefinationTest.login_page_is_displayed_and_i_will_enter_username_and_password(java.lang.String,java.lang.String)"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 4605789800,
+              "duration": 1000300,
               "status": "passed"
             },
             "line": 22,
-            "name": "select Organization from lookUp Page",
+            "name": "click on login button",
             "match": {
-              "location": "StepDefination.StepDefinationTest.select_organization_from_look_up_page()"
+              "location": "StepDefination.StepDefinationTest.click_on_login_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 10211451100,
+              "duration": 999500,
               "status": "passed"
             },
             "line": 23,
-            "name": "click on save button in contact module",
+            "name": "i will check whether i getting error msg or not",
             "match": {
-              "location": "StepDefination.StepDefinationTest.click_on_save_button_in_contact_module()"
+              "location": "StepDefination.StepDefinationTest.i_will_check_whether_i_getting_error_msg_or_not()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegressionTest"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "i will launch browser",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.i_will_launch_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 998700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "enter the url \"http://localhost:8888/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8888/\"",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefination.StepDefinationTest.enter_the_url(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-23T11:28:49.755Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.initBrowser()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "i want login to the application with invalid user name and password",
+        "description": "",
+        "id": "login-feature-for-vtiger-application;i-want-login-to-the-application-with-invalid-user-name-and-password;;4",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 998700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Login page is displayed and i will enter username \"sdsdss\" and password \"admin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sdsdss\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"admin\"",
+                  "offset": 72
+                }
+              ],
+              "location": "StepDefination.StepDefinationTest.login_page_is_displayed_and_i_will_enter_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "click on login button",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_login_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 507419500,
               "status": "passed"
             },
-            "line": 24,
-            "name": "Verify frirstName, LastName, phoneNumber and emailId created or not",
+            "line": 23,
+            "name": "i will check whether i getting error msg or not",
             "match": {
-              "location": "StepDefination.StepDefinationTest.verify_frirst_name_last_name_phone_number_and_email_id_created_or_not()"
+              "location": "StepDefination.StepDefinationTest.i_will_check_whether_i_getting_error_msg_or_not()"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegressionTest"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "i will launch browser",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.i_will_launch_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "enter the url \"http://localhost:8888/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8888/\"",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefination.StepDefinationTest.enter_the_url(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-23T11:28:49.822Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.initBrowser()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "i want login to the application with invalid user name and password",
+        "description": "",
+        "id": "login-feature-for-vtiger-application;i-want-login-to-the-application-with-invalid-user-name-and-password;;5",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefination.Hook.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Login page is displayed and i will enter username \"sdasdsd\" and password \"dsadsdsd\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sdasdsd\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"dsadsdsd\"",
+                  "offset": 73
+                }
+              ],
+              "location": "StepDefination.StepDefinationTest.login_page_is_displayed_and_i_will_enter_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6994900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "click on login button",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "i will check whether i getting error msg or not",
+            "match": {
+              "location": "StepDefination.StepDefinationTest.i_will_check_whether_i_getting_error_msg_or_not()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegressionTest"
           }
         ]
       }
     ],
-    "name": "i create a contact in vTiger application",
+    "name": "Login feature for vtiger application",
     "description": "",
-    "id": "i-create-a-contact-in-vtiger-application",
+    "id": "login-feature-for-vtiger-application",
     "keyword": "Feature",
-    "uri": "file:src/test/java/features/Contact.feature",
+    "uri": "file:src/test/java/features/Login.feature",
     "tags": []
   }
 ]
